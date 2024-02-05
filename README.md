@@ -30,3 +30,66 @@ Aplikasi POS atau point of sales adalah aplikasi yang digunakan untuk mengelola 
     -   Setting Diskon Member
 -   User (Administrator, Kasir)
 -   Grafik ChartJS pada Dashboard
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  https://github.com/Tsahrian/POS_al-barokah.git
+```
+
+## Setup aplikasi
+
+Jalankan perintah
+
+```bash
+  composer update
+```
+
+atau
+
+```bash
+  composer install
+```
+
+Copy file .env dari .env.example
+
+```bash
+  cp .env.example .env
+```
+
+onfigurasi file .env
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=al_barokah
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+Generate key
+
+```bash
+  php artisan key:generate
+```
+
+Migrate database
+
+```bash
+  php artisan migrate
+```
+
+Seeder table User, Pengaturan
+
+```bash
+  php artisan db:seed
+```
+
+Jalankan aplikasi
+
+```bash
+  php artisan serve
+```
